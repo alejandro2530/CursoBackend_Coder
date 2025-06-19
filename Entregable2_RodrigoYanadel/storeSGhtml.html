@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Store de Videojuegos Serios</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>Store de Videojuegos Serios</header>
+
+		<div class="sugerencia-container" style="max-width: 960px; margin: 0 auto 2rem; text-align: center;">
+			<input
+				type="text"
+				id="input-sugerencia"
+				placeholder="¿Qué quieres entrenar? Ej: equilibrio, concentración..."
+				style="width: 70%; padding: 0.8rem; font-size: 1rem; border-radius: 10px; border: 2px solid #b21f1f; outline: none;"
+			/>
+			<button
+				id="btn-sugerir"
+				style="padding: 0.8rem 1.4rem; font-weight: 700; margin-left: 0.8rem; border-radius: 12px; background-color: #b21f1f; color: #fdf6e3; border: none; cursor: pointer;"
+			>Buscar juego</button>
+			<div id="sugerencia-result" style="margin-top: 1rem; font-weight: 600; color: #fdbb2d; min-height: 1.4rem;"></div>
+		</div>
+
+		<main class="store">
+			<div id="contenedor-productos"></div>
+		</main>
+
+		<button id="cart-btn" class="cart-btn">Ver Productos</button>
+
+		<aside id="cart-panel" class="cart-panel">
+			<h2>🛍 Tu carrito</h2>
+			<div id="cart-items" class="cart-items"></div>
+			<div id="total"></div>
+			<button id="terminar-compra">Terminar compra</button>
+		</aside>
+
+		<script src="storeSG.js"></script>
+	</body>
+</html>
