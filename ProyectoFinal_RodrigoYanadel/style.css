@@ -1,0 +1,290 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2d1b69, #3f2d5e);
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+#input_video {
+  filter: blur(5px);
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.logoHeader {
+  max-height: 350px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.titulo-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#titleWeb {
+  font-size: clamp(24px, 4vw, 48px);
+  color: #e1a3ff;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#zonaDeJuego {
+  background: rgba(85, 85, 85, 0.8);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 40px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.info-juego {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+#titlePokeHand {
+  font-size: clamp(20px, 3vw, 28px);
+  color: #4dd0e1;
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+
+#subTitlePokeHand {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.contenidoCentral {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.contenidoCentral button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.contenidoCentral button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.contenidoCentral button:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+#contenedorJuego {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+#panelPokeCapturados {
+  width: 280px;
+  background: rgba(55, 71, 79, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+#panelPokeCapturados h2 {
+  font-size: 18px;
+  margin: 0 0 20px;
+  text-align: center;
+  color: #4dd0e1;
+  font-weight: 500;
+}
+
+.pokeCapturados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pokeCapturados > div {
+  background: rgba(84, 110, 122, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.pokeCapturados > div:hover {
+  transform: scale(1.05);
+}
+
+.pokeCapturados img {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+}
+
+.pokeCapturados h3 {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+#juegoAside {
+  flex: 1;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#panelJuego {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+#output_canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+#coordenadasIndice {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #00ff88;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  border: 1px solid #00ff88;
+}
+
+#panelJuego.pausado canvas {
+  filter: grayscale(100%) brightness(0.6);
+  pointer-events: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.insta-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.insta-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+#imagen {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #zonaDeJuego {
+    margin: 10px;
+    padding: 20px 10px;
+  }
+  
+  #contenedorJuego {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #panelPokeCapturados {
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    order: 2;
+  }
+  
+  .contenidoCentral {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contenidoCentral button {
+    width: 200px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(77, 208, 225, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(77, 208, 225, 0.8);
+}

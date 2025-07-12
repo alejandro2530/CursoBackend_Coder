@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juegos ConCiencia</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <header>
+    <img src="JuegosConCiencia.png" alt="Juegos ConCiencia Logo" class="logoHeader">
+  </header>
+  
+  <div class="titulo-principal">
+    <h1 id="titleWeb">Juegos con mecánicas y dinámicas basadas en experimentos científicos reales</h1>
+    </div>
+    
+    <div id="zonaDeJuego">
+      <div class="info-juego">
+        <h2 id="titlePokeHand">PokeHand Trainer</h2>
+        <h3 id="subTitlePokeHand">
+          Inspirado en los clásicos de nuestra infancia, "PokeHand Trainer" ofrece un entrenamiento cognitivo motor que desafía tus capacidad de adaptacion motora y cognitiva a los cambios de dificultad.
+        </h3>
+        <h4>
+          Guia de usuario: Realiza con ambas manos el gesto de pinza entre el índice y el pulgar en la zona donde quieras lanzar la
+          Pokebola. Ambas manos deben verse por la cámara.
+        </h4>
+    
+      </div>
+    <div id="controlesJuego" class="contenidoCentral">
+      <button id="iniciarJuego" class="iniciarJuego">Iniciar Juego</button>
+      <button id="pausarJuego" class="pausarJuego">Pausar Juego</button>
+      <button id="limpiarPokemon">Liberar pokemones</button>
+    </div>
+  
+    <div id="contenedorJuego">
+      <aside id="panelPokeCapturados" class="panelPokeCapturados">
+        <h2>Pokemones Capturados</h2>
+        <div id="pokeCapturados" class="pokeCapturados"></div>
+      </aside>
+      
+      <aside id="juegoAside">
+        <div id="panelJuego">
+          <canvas id="output_canvas" width="1280" height="720"></canvas>
+          <div id="coordenadasIndice"></div>
+        </div>
+        <video id="input_video" autoplay playsinline style="display: none;"></video>
+      </aside>
+    </div>
+  </div>
+  
+  <img src="" alt="" id="imagen">
+  
+  <footer class="footer">
+    <a href="https://www.instagram.com/ale.yanadel.vr" target="_blank" class="insta-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="insta-icon">
+      <span>@ale.yanadel.vr</span>
+    </a>
+  </footer>
+  
+  <script src="tracking.js"></script>
+  <script src="juego.js"></script>
+</body>
+</html>
